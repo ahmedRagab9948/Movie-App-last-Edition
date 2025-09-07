@@ -1,0 +1,18 @@
+.genre-swiper .swiper-button-next,
+.genre-swiper .swiper-button-prev {
+  color: rgba(255, 0, 0, 0.508);
+  background-color: transparent;
+  font-size: 14px;
+  height: 2.5rem;
+  width: unset;
+}
+
+.genre-swiper .swiper-button-next:hover,
+.genre-swiper .swiper-button-prev:hover {
+  color: red;
+}
+
+.genre-swiper .swiper-button-disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}

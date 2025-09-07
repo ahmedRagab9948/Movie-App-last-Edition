@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: black;
+  /* height: 5000px; */
+}
+
+.custom-swiper {
+  overflow: hidden;
+  position: relative;
+}
+
+.custom-swiper .swiper {
+  padding: 0 !important;
+}
+
+.swiper-pagination-bullet {
+  border-radius: unset !important;
+  display: inline-block;
+  width: 30px !important;
+  height: 3px !important;
+  background-color: rgb(198, 198, 198) !important;
+  transition: all ease-in-out 300ms !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: rgba(249, 0, 0, 0.986) !important;
+}

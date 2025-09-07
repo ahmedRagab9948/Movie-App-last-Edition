@@ -1,0 +1,33 @@
+.custom-toast {
+  font-size: 16px;
+  max-width: 400px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 640px) {
+  .custom-toast {
+    font-size: 14px;
+    max-width: 60vw; /* يخلي العرض متجاوب مع حجم الشاشة */
+    padding: 10px;
+  }
+}
+
+.loader {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #fff;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  animation: spin 0.7s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

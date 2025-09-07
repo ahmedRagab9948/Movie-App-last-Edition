@@ -1,0 +1,13 @@
+.filterSection .swiper-button-next,
+.filterSection .swiper-button-prev {
+  color: rgba(253, 0, 0, 0.514);
+  transition: all ease-in-out 200ms;
+}
+.filterSection .swiper-button-next:hover,
+.filterSection .swiper-button-prev:hover {
+  color: rgba(249, 0, 0, 0.986);
+}
+
+:root {
+  --swiper-navigation-size: 25px;
+}
