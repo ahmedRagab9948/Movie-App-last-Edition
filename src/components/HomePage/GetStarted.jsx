@@ -15,7 +15,7 @@ const GetStarted = () => {
           className="w-full sm:w-[65%] p-4 rounded-md bg-transparent border-2 border-gray-500 placeholder:text-gray-300 focus:outline-none focus:ring-2 focus:ring-red-600 transition-all duration-200"
         />
         <NavLink
-          to="/login"
+          to="/"
           className="w-full sm:w-auto px-6 py-4 rounded-md bg-red-600 text-lg font-semibold flex items-center justify-center gap-2 hover:bg-red-700 transition-all duration-200"
         >
           Get Started <IoIosArrowForward />

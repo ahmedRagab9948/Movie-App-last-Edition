@@ -25,7 +25,7 @@ const moviesSlice = createSlice({
         state.loading = false;
       })
       .addCase(fetchTrending.rejected, (state) => {
-        state.loading = false; // مهم لتوقيف اللودر عند الخطأ
+        state.loading = false;
       });
   },
 });

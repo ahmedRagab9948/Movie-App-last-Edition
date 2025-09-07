@@ -5,7 +5,7 @@ import { useAuth } from "../context/AuthContext";
 import { addToMyList, removeFromMyList } from "../firebase/firestore";
 import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
-import { useMyList } from "../hooks/useMyList"; // if available
+import { useMyList } from "../hooks/useMyList";
 
 const MovieCard = ({ movie }) => {
   const { user } = useAuth();
@@ -16,7 +16,7 @@ const MovieCard = ({ movie }) => {
     movie.release_date?.slice(0, 4) || movie.first_air_date?.slice(0, 4);
 
   const [isFav, setIsFav] = useState(false);
-  const [myList] = useMyList(user?.uid); // <-- optional for better performance
+  const [myList] = useMyList(user?.uid);
 
   useEffect(() => {
     if (myList) {

@@ -1,5 +1,4 @@
 import SwiperComponents from "./Swiper2d";
-// import Swiper2d from "./Swiper2d";
 
 const HeroMovie = ({ movies }) => {
   return (

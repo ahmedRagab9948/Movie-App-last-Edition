@@ -14,7 +14,6 @@ export const handleAddToList = async ({ user, item }) => {
     return;
   }
 
-  // 👇 عرض رسالة مؤقتة بشكل فوري
   const loadingToast = toast.loading("Adding to your list...");
 
   try {

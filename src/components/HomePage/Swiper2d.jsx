@@ -6,9 +6,19 @@ import "swiper/css/effect-fade";
 import { FaPlay } from "react-icons/fa";
 import { useAuth } from "../../context/AuthContext";
 import { handleAddToList } from "../../functions/handleAddToList";
+import { toast } from "react-toastify";
 
-const SwiperComponents = ({ movies }) => {
+const SwiperComponents = ({ movies, trailerUrl, setIsTrailerOpen }) => {
   const { user } = useAuth();
+
+  const handlePlay = () => {
+    if (trailerUrl) {
+      setIsTrailerOpen(true);
+    } else {
+      toast.info("No trailer available");
+    }
+  };
+
   const handleAdd = (movie) => {
     handleAddToList({ user, item: movie });
   };
@@ -53,13 +63,16 @@ const SwiperComponents = ({ movies }) => {
                   </p>
 
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <button className="bg-red-600 hover:bg-red-700 shadow-lg shadow-red-500/50 px-6 sm:px-10 py-2 sm:py-3 rounded-full font-semibold flex justify-center items-center gap-2 cursor-pointer duration-300 ease-in-out text-sm sm:text-base">
+                    <button
+                      onClick={handlePlay}
+                      className="bg-red-600 hover:bg-red-700 shadow-lg shadow-red-500/50 px-6 sm:px-10 py-3 rounded-full font-semibold flex justify-center items-center gap-2 cursor-pointer duration-300 ease-in-out text-sm sm:text-base"
+                    >
                       <FaPlay /> Watch
                     </button>
 
                     <button
                       onClick={() => handleAdd(movie)}
-                      className="bg-black hover:bg-gray-950 px-6 sm:px-10 py-2 sm:py-3 rounded-full font-semibold cursor-pointer duration-300 ease-in-out text-sm sm:text-base"
+                      className="bg-cyan-600 transition-all duration-300 ease-in-out hover:bg-cyan-700 py-3 px-6 md:px-12 rounded-full font-semibold text-lg flex justify-center items-center gap-2 "
                     >
                       ＋ Add to List
                     </button>

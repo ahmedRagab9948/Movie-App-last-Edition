@@ -11,11 +11,14 @@ export const tmdb = axios.create({
   },
 });
 
+// Get Trending Movies Function
+
 export const getTrendingMovies = async () => {
   const res = await tmdb.get("/trending/movie/week");
   return res.data.results;
 };
 
+// Get Genres Function
 export const getGenres = async () => {
   const res = await tmdb.get("/genre/movie/list");
   return res.data.genres;
@@ -30,11 +33,13 @@ export const searchMedia = async (query) => {
   return res.data;
 };
 
+// Get Similar Media Function
 export const getSimilarMedia = async (mediaType, id) => {
   const res = await tmdb.get(`/${mediaType}/${id}/similar`);
   return res.data.results;
 };
 
+// Get Recommended Media Function
 export const getRecommendedMedia = async (mediaType, id) => {
   const res = await tmdb.get(`/${mediaType}/${id}/recommendations`);
   return res.data.results;

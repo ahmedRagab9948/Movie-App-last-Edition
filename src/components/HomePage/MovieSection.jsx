@@ -17,12 +17,12 @@ const MovieSection = ({ mediaType = "movie" }) => {
       label: "Premieres",
       icon: <FaStar />,
       endpoint: `/${mediaType}/now_playing`,
-    }, // ممكن تغيرها لو كانت series
+    },
     {
       label: "Recently Added",
       icon: <FaPlus />,
       endpoint: `/${mediaType}/upcoming`,
-    }, // ممكن تغيرها لو كانت series
+    },
   ];
 
   const [activeTab, setActiveTab] = useState(tabs[0]);

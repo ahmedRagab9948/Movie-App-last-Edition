@@ -12,7 +12,7 @@ export default function SplashWrapper({ children }) {
       const timer = setTimeout(() => {
         sessionStorage.setItem("splashShown", "true");
         setShowSplash(false);
-      }, 4000); // مدة العرض 4 ثواني مثلاً
+      }, 4000);
 
       return () => clearTimeout(timer);
     }

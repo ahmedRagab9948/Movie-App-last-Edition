@@ -26,8 +26,6 @@ export default function AuthPage() {
         await createUserWithEmailAndPassword(auth, email, password);
         toast.success("Account created successfully 🎉");
       }
-
-      // الانتقال بعد نجاح العملية
       setTimeout(() => {
         navigate("/");
       }, 1500);

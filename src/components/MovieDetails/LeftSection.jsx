@@ -51,7 +51,7 @@ export default function LeftSection({
         </button>
         <button
           onClick={handleAdd}
-          className="bg-cyan-600 transition-all duration-300 ease-in-out hover:bg-cyan-700 py-3 px-6 md:px-12 rounded-full font-semibold text-lg flex justify-center items-center gap-2"
+          className="text-md sm:text-base bg-cyan-600 transition-all duration-300 ease-in-out hover:bg-cyan-700 py-3 px-6 md:px-12 rounded-full font-semibold md:text-lg flex justify-center items-center gap-2 "
         >
           ＋ Add to List
         </button>
